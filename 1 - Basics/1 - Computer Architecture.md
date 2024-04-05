@@ -44,4 +44,4 @@ Cache can be measures in terms of read/write in a time unit called nanosseconds 
 
 # Computer Diagram
 
-![](/images/ca.png)
+![](/images/1.png)
