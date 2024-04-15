@@ -3,6 +3,7 @@
 Due Rest paradigm limitations, another paradigm was created to solve over-fetching and under-fetching, it is called GraphQL.
 GraphQL allow clients to perform Query(Request) to a server, asking only the necessary data it desires. The server then process that Query(Request), based on a schema defined on the server, and return its response.
 Different than Rest which perform requests over HTTP methods, GraphQL perform two type of requests called Queries, and Mutations.
+GraphQL can give advantages for mobile applications and systems that works on not very good network speed.
 
 ## Query
 
