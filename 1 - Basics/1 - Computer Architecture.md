@@ -37,7 +37,7 @@ CPU can perform any sort of operations in the data in your memory and hard disk,
 
 ## Cache
 
-This last component is embedded in the CPU. Some data can be often used by the CPU and it is not as large to be stored in memory. In this case, the OS (operational system) will store this data into the CPU cache for quickly use.
+This last component is embedded in the CPU. Some data can be often used by the CPU and it is not as large to be stored in memory. In this case, the CPU will select data based on policies to efficiency use.
 Applications can often benefit of this sort of design, such web applications, where data is not often changed and don't need to be request many times over the network.
 Cache can be measures in terms of read/write in a time unit called nanosseconds (ns).
 
