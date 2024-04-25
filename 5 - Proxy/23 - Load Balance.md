@@ -66,3 +66,23 @@ Layer 4 Load Balancing rely on the Layer 4 of the OSI (Open Systems Interconnect
 Layer 7 Load Balancing rely on the layer 7 of the OSI model. This layer is the application layer which deals with applications protocols such as HTTP.
 When a incoming request reaches the Load Balancer, it analyses many aspects of the request message such as url, query params, headers and/or payload to make decisions before forward the request.
 In this algorithm many other algoritms are applied such as server health, response time, current server load. These allows the load balancer to forward the request to the most appropriate server based on Availability Design Requirement.
+
+## Consistent Hashing
+
+There is another technique that allows us to achieve Load Balancing which is hashing.
+Hashin is an algorithm that based on an input I and a range of numbers N we can find which position of that range of number our input can be allocated/directed.
+
+So imagine we have a request R which always has in its headers the client IP, or RequestID or any other unique identifier that leads to that request user. Now we have a range of servers S(3).
+
+Hashing will calculate the modulus of that IP or RequestID from request R, with the number of servers. The result will be a number from 0-2 which is the index of our list of servers S. Each new request R with that IP or RequestID will be forward to that server S.
+
+Hashing in a Load Balancing is a good technique when dealing with static content access, caching or database where the data of that user will be stored.
+
+The problem is when one of the servers goes down. Future requests R with those attributes will now have another server S index. Which means we gonna access a server S that no longer contains the data which that user once sent to the server, or requested.
+
+This is where Consistent Hashing comes in.
+Consistent Hashing works using the same hash algorithm to find the index of our server S.
+But this time, our servers S are arranged in a circular array data structure, with a N number of slots, each for a server S.
+In a case where one server goes down, our hashing algorithm will calculate the server S index using a probe technique, which allow us to find the next server available in our circular array of servers. This next available server S will be connected to the same cache or database or content store that the previous server (now unavailable) were connected.
+
+Consistent Hashing ensure not just Availability Design Requirement, but also consistency to data access.
