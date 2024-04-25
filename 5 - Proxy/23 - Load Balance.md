@@ -65,4 +65,4 @@ Layer 4 Load Balancing rely on the Layer 4 of the OSI (Open Systems Interconnect
 
 Layer 7 Load Balancing rely on the layer 7 of the OSI model. This layer is the application layer which deals with applications protocols such as HTTP.
 When a incoming request reaches the Load Balancer, it analyses many aspects of the request message such as url, query params, headers and/or payload to make decisions before forward the request.
-In this algorithm many other algoritms are applied such as server health, response time, current server load.
+In this algorithm many other algoritms are applied such as server health, response time, current server load. These allows the load balancer to forward the request to the most appropriate server based on Availability Design Requirement.
