@@ -46,9 +46,9 @@ ex. User data into wide column store
 
 ## Graph store
 
-Graph store is another peculiar database, which is designed to solve problems of efficient data querying over complex data relationships.
-It is structured as a graph ds, which each node represents the entire entity, and edges are used to connect nodes by their relantionship, each node can contain many different categories of edge relantionships.
-Systems such map app, social media, media content management, search engine are examples of systems that benefit from this sort of databases.
+Graph store is another unique database, which is designed to deal with complex data relationships.
+This database is structured in such way that, data is arranged as collection of nodes, which represents an entirely entity. Each connection with other nodes/entities are represented through edges, which can have many sort of categories that connect one node to another.
+Systems that can better fit the use of a graph database are map applications, social media, media content management, and search engines.
 
 ## Why NoSQL?
 
