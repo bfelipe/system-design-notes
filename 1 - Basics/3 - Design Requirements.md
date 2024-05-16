@@ -87,7 +87,7 @@ But what happens when millions of users start to hit our server? That is the rat
 
 A clear example of how these three factors work together is when we think about a DDOs (distributed denial of service) attack. Multiple users start to hit our servers, by scalling them up we ensure our system do not goes down to the actual users trying to use our app. Having redundancy or extra instances of our servers even without them being used ensure that in a critical state, we can keep serving healthy users with our services.
 
-## Throughout
+## Throughput
 
 Throughput is a factor considering in System Design when considering how much data or operations we can perform in a given time.
 There are different ways to measure that, and logs can easily come into play to visualize this insight.
